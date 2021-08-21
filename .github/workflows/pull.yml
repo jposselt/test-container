@@ -24,4 +24,4 @@ jobs:
       
       - name: Run Image
         run: |
-          docker run test-container
+          docker run ghcr.io/jposselt/test-container
