@@ -17,6 +17,10 @@ jobs:
       - name: Pull Image from GitHub Container Registry
         run: |
           docker pull ghcr.io/jposselt/test-container:latest
+          
+      - name: List Images
+        run: |
+          docker image list
       
       - name: Run Image
         run: |
