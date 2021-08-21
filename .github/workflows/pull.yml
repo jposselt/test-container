@@ -1,0 +1,17 @@
+name: Pull Docker
+
+on:
+  workflow_dispatch:
+
+jobs:
+  Pull:
+    runs-on: ubuntu-latest
+    steps:
+        
+      - name: Pull Image from GitHub Container Registry
+        run: |
+          docker pull ghcr.io/jposselt/test-container:latest
+      
+      - name: Run Image
+        run: |
+          docker run test-container
